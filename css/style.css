@@ -1,0 +1,62 @@
+
+body{
+  background-color: #F7ECDE;
+}
+
+h1 {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight:500px;;
+  font-style: normal;
+display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+h1::before{
+  content: "";
+position: absolute;
+  background-color: rgb(209, 156, 118);
+bottom:3px;
+width:100%;
+height:25%;
+z-index: -1;
+  transition: height 0.5s ease-in;
+
+
+}
+
+.title:hover h1::before{
+  position: absolute;
+  bottom: 0;
+    background-color: rgb(209, 156, 118);
+height: 100%;
+}
+.doted {
+  border: 2px dotted black;
+}
+
+.main-content-title h2 , .main-content-title .gradient{
+  background: linear-gradient(90deg, rgb(159, 171, 76), #4CA75B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+
+
+.submit button{
+  width: 130px;
+}
+.vis::after{
+font-family: "Font Awesome 6 Free";
+  font-weight: 900; 
+  content: "\f06e";
+  margin-right: 5px;
+  color: rgb(208, 226, 208);
+}
+.del::after{
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; 
+  content: "\f2ed";
+    color: rgb(208, 226, 208);
+}

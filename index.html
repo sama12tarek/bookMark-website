@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Font Awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+integrity="sha512-4XwUTNqfpUpRFZP07Sk4XrUlZ6Gj2hH92sBhc37qUCwx0g06gNHnvbiFu4ZpJTb3JxSNTPlG8nTj+E1cbTOzlw=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap"
+rel="stylesheet"
+/>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<div class="header d-flex flex-column justify-content-center ">
+  <div class="title d-flex justify-content-center  align-items-center">
+  <h1 class="text-center fw-bold mt-4">Bookmarker</h1>
+
+</div>
+<span class="doted d-inline-block w-100 my-5"></span>
+</div>
+
+<div class="main-content">
+  <div class="main-content-title d-flex justify-content-center ">
+      <span class="me-3"><i class="fa-solid fa-bookmark" style="color: #24c63f;"></i></span>
+    <h2 class="text-center "> Bookmark your favorite sites </h2>
+    <span  class="ms-3  d-inline-block"><i class="fa-solid fa-bookmark gradient"></i></span>
+  </div>
+  <form>
+      <div class="box-conent bg-white p-4 rounded-2 shadow-lg d-none" id="error">
+          <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"><i class="fa-solid fa-circle" style="color: #c62424;"></i></span>
+              <span class="rounded-circle me-2"><i class="fa-solid fa-circle" style="color: #319a23;"></i></span>
+              <span class="rounded-circle me-2"><i class="fa-solid fa-circle" style="color: #181db9;"></i></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+  <label for="siteName" class="my-2">Site Name</label>
+
+  <input type="text"  class="form-control mt-2" id="siteName" oninput="validateData(this)">
+    <label for="url" class="my-2">site Url</label>
+  
+    <input type="text" id="url" class="form-control mt-2" oninput="validateData(this)">
+  </form>
+  <div class="text-center my-5 submit"><button class="btn btn-danger" type="button" onclick="create()">Submit</button>
+</div>
+<span class="doted d-inline-block w-100 my-3"></span>
+
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">index</th>
+      <th scope="col">Website Name</th>
+      <th scope="col">Visit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody id="taple-data">
+    <tr>
+      <th scope="row">1</th>
+  
+      <td>WebsiteName</td>
+      <td>
+         <button class="btn btn-success" type="button">
+            Visit 
+          </button>
+      </td>
+      <td><button class="btn btn-danger" type="button">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+
+      <td>WebsiteName</td>
+      <td><button class="btn btn-success" type="button">Visit</button></td>
+      <td><button class="btn btn-danger" type="button">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+    
+      <td>WebsiteName</td>
+      <td><button class="btn btn-success" type="button">Visit</button></td>
+      <td><button class="btn btn-danger" type="button">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
